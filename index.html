@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Marvel Comic</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-slate-500">
+        <nav class="bg-zinc-900 h-14 w-full flex justify-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Marvel_Logo.svg" class="h-full" alt="">
+        </nav>
+        <div id="container" class="flex flex-wrap justify-center mb-5"></div>
+
+        <div id="sendtomap" class="flex justify-center hidden ">
+            <div id="comic_envio" class="m-1 relative h-80 text-white text-center m-5 top-12  w-60">
+              <img src="" class="h-full" alt="">
+              <div id="Title" class="font-bold"></div>
+              <div id="Data"></div>
+              <div id="Editor" ></div>
+              <div id="address" class="mt-10 text-2xl font-bold"></div>
+            </div>
+            <input type="text" id="place_input" class="absolute w-96 h-14 rounded-lg text-xl z-10 " placeholder="Digite o local a ser enviado o quadrinho">
+            <div id="map" class="m-1 h-96 w-96 rounded-lg m-5 top-12"></div>
+            <button id="boton" type="submit" class="absolute mt-20 w-96 border-2 border-white text-white bottom-0 rounded-lg text-2xl hover:bg-white ease-in-out duration-300 hover:text-slate-500">Enviar</button>
+        </div>
+          
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALCCEtdDp0_EUQ4QTCYYpwS6mcN31inII&libraries=places&callback=initMap"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/map.js"></script>
+    </body>
+</html>
